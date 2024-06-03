@@ -20,8 +20,8 @@ print(type(tuple))
 # list 와 유사하지만 한 번 생성되면 각 요소 값을 수정하거나 삭제할 수 없다.
 # 주로 데이터의 집합을 안전하게 유지하거나, 함수에서 여러 값을 반환할 때 사용된다.
 
-safari_tupe = ("Bear", "Koara", "Gorilla","pig")
-print(safari_tupe)
+safari_tuple = ("Bear", "Koara", "Gorilla","pig")
+print(safari_tuple)
 
 # 튜플은 중첩으로 표현할 수 있다.
 tuples = (1, 2, 'hello'), ('test', 1, 2, 3, 4)
@@ -36,4 +36,12 @@ print(tuples[0][0])
 testList = (1, 2, 3, 4)
 print(id(testList))         #주소값을 반환한다.
 testList = (3,4,5)
-print(id(testList))         #기존의 주소값과의 연결을 끊고 새로운 주소값과 연결.
+print(id(testList))         #기존의 주소값과의 연결을 끊고 새로운 주소값과 연결. 선언과 할당이 같이 이루어짐.
+
+#튜플 간 연산
+another_safari_tuple = ("monkey", "tiger", "wolf")
+print(safari_tuple + another_safari_tuple)
+
+print(safari_tuple * 3)
+
+print(len(safari_tuple + another_safari_tuple))
