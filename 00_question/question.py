@@ -10,7 +10,7 @@
 #name = input("성함을 입력해주세요")
 #point = int(input('성적을 입력주세요'))
 
-grades = {}
+grades = {}                                            #키-값(쌍으로)
 
 def display_menu():
     print("1. 학생 성적 입력")
@@ -23,6 +23,7 @@ def add_grade():
     name  = input("학생 이름을 입력하세요: ")
     grade = int(input("학생 성적을 입력하세요: "))
     grades[name] = grade
+    print(grades)
     print(f"{name}님의 성적이 저장되었습니다.")
 
 def get_grade():
@@ -64,21 +65,5 @@ while True:
         break
     else:
         print("잘못된 선택입니다. 다시 시도하세요.")
-#num = 0
-#d = True
-#while d:
-    #name  = input("성함을 입력해주세요")
-    #point = int(input('성적을 입력주세요'))
-   # grade['name']  = input("성함을 입력해주세요")
-   # grade['point'] = int(input('성적을 입력주세요'))
-    #num += 1
-    #if(num > 3):
-       # d = False
-
-#for x in grade['point'].v:
-     
-       
-
-#print()
 
 
