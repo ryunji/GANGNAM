@@ -26,7 +26,7 @@ print(num3 % num4)
 print(num3 // num4)
 
 # 제곱 연산
-base = 9
+base     = 9
 exponent = 3
 print(base ** exponent)
 
@@ -107,9 +107,9 @@ print("x is {0} y is {1}".format(x, y))    #x is 10 y is code
 
 #형 변환
 #암시적 형 변환
-print(True + 3)   #정수는 True는 1, False는 0
-print(3 + 5.0)    #자동 float로 형변환 됨.
-#print(3 + '5')   #이건 명시적으로 형변환 해야 한다.
+print(True + 3)                           #정수는 True는 1, False는 0
+print(3 + 5.0)                            #자동 float로 형변환 됨.
+#print(3 + '5')                           #이건 명시적으로 형변환 해야 한다.
 
 #명시적 형 변환
 print(int('3') + 4)

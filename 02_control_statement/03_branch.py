@@ -22,7 +22,7 @@ for i in range(3):
 
 for x in [1,2,3]:
     if x == 2:
-        print("끝1")
+        print("끝")
         break
     else:
         print(x)

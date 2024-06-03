@@ -3,7 +3,7 @@
 # 일반적인 프로그래밍 언어와 다르게 길이를 동적으로 조절할 수 있어 list 라고 부른다.
 # python은 list가 배열이다.
 
-fruits  =['orange', 'apple', 'pear', 'kiwi', 'apple']
+fruits = ['orange', 'apple', 'pear', 'kiwi', 'apple']
 print(fruits)
 print(fruits[0])
 
@@ -15,7 +15,7 @@ print("apple : ", fruits.count('apple'))
 # 같은 값이 리스트 내에 여러 개 존재하면 가장 처음에 존재하는 값의 인덱스를 반환한다.
 print("index : ", fruits.index('apple'))        #처음으로
 
-print("index : ", fruits.index('apple', 3))     #세번째 인덱스 이후에, 몇번째로 나오는지
+print("index : ", fruits.index('apple', 3))     #세번째 인덱스 이후에, apple이 몇번째로 나오는지
 
 # 3. reverse() : list 값을 역으로 정렬한다.
 fruits.reverse()

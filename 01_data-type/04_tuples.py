@@ -16,7 +16,7 @@ print(type(tuple))
 # Tuple
 
 # python 에서 사용하는 자료형 중 하나로, 여러 개의 값을 하나의 데이터 구조로 묶어서
-# 관리할 수 있는 불변 시퀀스이다
+# 관리할 수 있는 불변 시퀀스이다. 자바스크립트의 const 같은 개념.
 # list 와 유사하지만 한 번 생성되면 각 요소 값을 수정하거나 삭제할 수 없다.
 # 주로 데이터의 집합을 안전하게 유지하거나, 함수에서 여러 값을 반환할 때 사용된다.
 
@@ -34,9 +34,9 @@ print(tuples[0][0])
 #tuples[0] = (1, 2, 3, 4)
 
 testList = (1, 2, 3, 4)
-print(id(testList))         #주소값을 반환한다.
+print(id(testList))                                                    #주소값을 반환한다.
 testList = (3,4,5)
-print(id(testList))         #기존의 주소값과의 연결을 끊고 새로운 주소값과 연결. 선언과 할당이 같이 이루어짐.
+print(id(testList))                                                 #기존의 주소값과의 연결을 끊고 새로운 주소값과 연결. 선언과 할당이 같이 이루어짐.
 
 #튜플 간 연산
 another_safari_tuple = ("monkey", "tiger", "wolf")

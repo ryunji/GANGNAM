@@ -11,7 +11,7 @@
 for x in 'abc':
     print(x)
 
-for x in {'one', 'two', 'three'}:       #set구조는 순서를 보장하지 않는다.
+for x in {'one', 'two', 'three'}:                       #set구조는 순서를 보장하지 않는다.
     print(x)    
 
 for [x,y] in [[1,2], [3,4], [5,6]]:
@@ -53,14 +53,12 @@ for i in range(len(a)):
 
 print(range(10))  
 
-
 print(sum(range(4)))
 
 for dan in range(2, 10):
     for i in range(1, 10):
         print(str(dan) + " * " + str(i) + " = " + str(dan*i))
     print()    
-
 
 # while 문
 # while 조건문:

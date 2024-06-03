@@ -43,7 +43,7 @@ print(ohgifaffers1)
 javaTeam = {'gorilla', 'tiger', 'monkey'}
 pythonTeam = {'pig', 'bear', 'gorilla', 'tiger'}
 
-ohgifaffers2 = javaTeam.union(pythonTeam)           #중복을 제외한 합집합
+ohgifaffers2 = javaTeam.union(pythonTeam)                       #중복을 제외한 합집합
 print(ohgifaffers2)
 
 # 6. intersection() : 두 set 자료형의 교집합을 반환
