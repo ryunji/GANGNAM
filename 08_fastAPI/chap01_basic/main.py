@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import uvicorn
 # fastAPI
 # python으로 작성된 API를 만들기 위한 웹 프레임워크
 
@@ -20,6 +21,8 @@ def read_root():
 # python에서는 각 파일이 실행 될 때마다 특별한 변수인 __name__을 갖는다.
 # 스크립트가 실행될 때, __name__변수는 "__main__" 으로 설정된다.
 # 스크립트가 다른 모듈에 임포트 될 때 __name__ 변수는 해당 모듈의 이름으로 바뀐다.
+
+
 if __name__ == "__main__":
     uvicorn.run("main:app", reload=True)
 # uvicorn main:app --reload

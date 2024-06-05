@@ -53,3 +53,36 @@ async def add(request:Request, task:str=Form(...), db:Session = Depends(get_db))
 
     # 요청이 성공적으로 처리 됐으면 리디렉션
     return RedirectResponse(url=app.url_path_for("home"), status_code=status.HTTP_303_SEE_OTHER)
+
+@app.get('/edit/{todo_id}') #선택한 번호를 가져옴
+async def add(request:Request, todo_id:int, db:Session = Depends(get_db)):
+    # 데이터베이스에서 Todo 모델을 가져와서, id가 todo_id와 일치하는 첫 번째 항목을 가져옴
+    todo = db.query(models.Todo).filter(models.Todo.id == todo_id).first()
+    # 템플릿을 렌더링하여 사용자에게 반환
+    return templates.TemplateResponse("edit.html", {"request": request, "todo":todo})
+
+@app.post("/edit/{todo_id}")
+async def add(request:Request, todo_id:int, task:str = Form(...), completed:bool = Form(False), db:Session = Depends(get_db)):
+
+    todo = db.query(models.Todo).filter(models.Todo.id == todo_id).first()
+    # todo task 속성을 품에서 받아온 값으로 업데이트
+    todo.task = task
+    # todo 의 completed 속성을 폼에서 받아온 completed 값으로 업데이트
+    todo.completed = completed
+
+    db.commit()
+
+    #홈으로 리디렉션
+    return RedirectResponse(url=app.url_path_for("home"), status_code=status.HTTP_303_SEE_OTHER)
+
+
+@app.get("/delete/{todo_id}")
+async def delete(request:Request, todo_id:int, completed:bool = Form(False), db:Session = Depends(get_db)):
+
+    todo = db.query(models.Todo).filter(models.Todo.id == todo_id).first()
+    db.delete(todo)
+    # 변경 사항을 커밋
+    db.commit()
+
+    # 요청이 성공적으로 처리 됐으면 리디렉션
+    return RedirectResponse(url=app.url_path_for("home"), status_code=status.HTTP_303_SEE_OTHER)
